@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+sup {
+  font-size: 0.5em;
+}
+
 .nav {
   width: 100%;
 
@@ -55,30 +59,27 @@
   padding-top: 44px;
 }
 
-/* section {
-} */
-
-/* .section--product {
-} */
-
-.section--product__container {
+.section--container {
   display: grid;
   column-gap: 12px;
   row-gap: 12px;
+}
+
+.product__container {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.product--iphone-pro,
-.product--iphone-14,
-.product--watch {
-  height: 736px;
-
+.section--container > div {
   display: flex;
   justify-content: center;
 
   position: relative;
   overflow: hidden;
+}
+
+.product__container > div {
+  height: 736px;
 }
 
 .product--iphone-pro {
@@ -93,47 +94,50 @@ h2 {
   text-align: center;
 }
 
-.product--iphone-pro h2 {
-  color: #f5f5f7;
-}
-
 h3 {
   font-size: 28px;
 
-  /* margin-bottom: 15px; */
-
   text-align: center;
+}
+
+.section--product .textbox {
+  margin-top: 55px;
+}
+
+.product__container:first-child .textbox {
+  margin-top: 100px;
+}
+
+.section--product .textbox > p {
+  font-size: 21px;
+  margin-top: 13px;
 }
 
 .product--iphone-pro h3 {
   color: #f5f5f7;
 }
 
-.product__textbox {
+.textbox {
   text-align: center;
-  margin-top: 70px;
 
   z-index: 2;
 }
 
-.product--iphone-pro .product__textbox {
-  margin-top: 100px;
-}
-
-.product__textbox__learn {
+.textbox__learn {
   display: flex;
   justify-content: center;
 
   cursor: pointer;
 }
 
-.product__textbox__learn a {
-  font-size: 21px;
+.textbox__learn a {
   text-decoration: none;
 
-  line-height: 100%;
-
   color: #2997ff;
+}
+
+.section--product .textbox__learn a {
+  font-size: 21px;
 }
 
 .product__textbox__learn a:hover {
@@ -157,15 +161,65 @@ h3 {
   margin-left: 35px;
 }
 
-.product__img {
-  /* width: 3008px;
-  height: 736px; */
-  background-size: none;
+.product__img,
+.promo__img {
   position: absolute;
+  /* top: 100%; */
+  /* left: 20%; */
+  /* transform: translate(-50%, -50%); */
 
   z-index: 1;
 }
 
-/* .product__textbox img {
-  left: -50%;
-} */
+.promo__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.section--promo {
+  margin: 12px;
+}
+
+.section--promo .promo__container > div {
+  height: 580px;
+}
+
+h4 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+h5 {
+  font-size: 21px;
+  line-height: 1.2381;
+
+  margin: 7px 0 12px 0;
+  text-align: center;
+}
+
+.promo__textbox {
+  padding-top: 60px;
+}
+
+.promo--edu .textbox {
+  padding-top: 0;
+  margin: auto;
+}
+
+.promo--fitness .PS {
+  margin-top: 345px;
+  color: #86868b;
+}
+
+.promo--edu .textbox__learn a {
+  color: #f5f5f7;
+}
+
+.dark-theme {
+  color: #f5f5f7;
+  background-color: black;
+}

@@ -80,7 +80,7 @@
 hr {
   width: 100%;
   border-top: 1px solid #dedede;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .etc__types__wrap ul {
@@ -109,19 +109,214 @@ hr {
 
 .topics__wrap {
   margin-top: 60px;
-  text-align: center;
+}
+
+.topics__wrap .search__box {
+  position: relative;
+  margin-left: 13%;
 }
 
 .topics__wrap h3 {
   font-size: 40px;
+  text-align: center;
 }
-.topics__wrap input {
-  margin-top: 10px;
-  text-align: none;
+
+.topics__wrap .search__box input {
+  display: block;
+  margin-left: 200px;
+  margin-top: 30px;
   background-color: white;
-  width: 817px;
+  width: 50%;
   height: 52px;
   border: 1px solid #dedede;
-  padding: 0 35px;
+  padding: 0 45px;
   font-size: 1.375rem;
+}
+
+.topics__wrap .search__box img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  left: 215px;
+  margin-bottom: 60px;
+}
+
+.update__wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.update__wrap .update__image img {
+  width: 400px;
+  height: 210px;
+}
+
+.update__wrap .update__detail .update__description {
+  margin-top: 15px;
+}
+
+.update__wrap .update__detail .update__link {
+  display: block;
+  margin-top: 70px;
+  color: #0070c9;
+  font-size: 18px;
+}
+
+.get__support__wrap {
+  margin-top: 80px;
+  position: relative;
+  height: 350px;
+  /* height: 400px; */
+}
+
+.get__support__wrap img {
+  position: absolute;
+  width: 100%;
+  /* height: 350px; */
+}
+.get__support__detail {
+  margin-left: 23%;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.get__support__detail .get__support__title {
+  color: white;
+}
+
+.get__support__detail .get__support__description {
+  margin-top: 15px;
+  color: white;
+}
+
+.get__support__detail a {
+  margin-top: 15px;
+  display: block;
+  color: #66bbff;
+}
+
+.trade__wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+}
+
+.trade__wrap .trade__description h2 {
+  margin-bottom: 25px;
+}
+
+.trade__wrap .trade__description p {
+  margin-bottom: 25px;
+}
+
+.trade__wrap .trade__description a {
+  color: #0070c9;
+}
+
+.trade__wrap .trade__image img {
+  width: 400px;
+  height: 165px;
+}
+
+.apple__care__wrap {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.apple__care__wrap .apple__care__image img {
+  width: 400px;
+}
+.apple__care__wrap .apple__care__description {
+  margin-left: 20px;
+}
+
+.apple__care__wrap .apple__care__description p {
+  margin-top: 10px;
+}
+.apple__care__wrap .apple__care__description a {
+  display: block;
+  margin-top: 40px;
+  color: #0070c9;
+}
+
+.my__support__wrap {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.my__support__wrap .my__support__description p {
+  margin-top: 40px;
+}
+
+.my__support__wrap .my__support__description a {
+  display: block;
+  margin-top: 20px;
+  color: #0070c9;
+}
+
+.my__support__wrap .my__support__image img {
+  width: 400px;
+}
+
+.repairs__wrap {
+  text-align: center;
+}
+.repairs__wrap h2,
+p {
+  margin-top: 20px;
+}
+
+.repairs__wrap p a {
+  color: #0070c9;
+}
+
+.beware__wrap {
+  text-align: center;
+}
+
+.beware__wrap h2,
+p {
+  margin-top: 20px;
+}
+
+.beware__wrap p a {
+  color: #0070c9;
+}
+
+.gift__card__wrap {
+  margin-top: 70px;
+  display: flex;
+  justify-content: left;
+  margin-left: 27%;
+}
+
+.gift__card__wrap .gift__card__image img {
+  width: 200px;
+}
+.gift__card__wrap .gift__card__detail {
+  margin-left: 50px;
+}
+.gift__card__wrap .gift__card__detail a {
+  display: block;
+  margin-top: 20px;
+  color: #0070c9;
+}
+
+.service__program__wrap {
+  margin-left: 27%;
+}
+
+.service__program__wrap h2 {
+  margin-top: 30px;
+}
+
+.service__program__wrap ul li {
+  list-style: none;
+  margin-top: 20px;
+  color: #0070c9;
 }

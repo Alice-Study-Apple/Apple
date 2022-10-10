@@ -1,0 +1,456 @@
+@charset "utf-8";
+
+/* @font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+/* @font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+} */
+
+/** Regular */
+@font-face {
+    font-family: "SF Pro Text";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+    font-family: "SF Pro Text";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "SF Pro Text";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+    font-family: "SF Pro Text";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+/* 
+@font-face {
+    font-family: "SF Pro Text";
+    font-weight: 600;
+    src: url("./SF-Pro.woff");
+} */
+
+a {
+    color: #06c;
+    font-weight: 500;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 10px;
+}
+
+.ipad__blind__txt {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+/* font color */
+.ipad__color__white {
+    color: #fff;
+}
+
+.ipad__color__orange {
+    color: #f56300;
+}
+
+.ipad__color__lightBrown {
+    color: #bf4800;
+}
+
+.ipad__color__black {
+    color: #1d1d1f;
+}
+
+/* font style */
+.ipad__font__h2 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07143;
+}
+
+.ipad__font__head {
+    width: 100%;
+    padding: 130px 0 70px;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07143;
+    text-align: center;
+}
+
+.ipad__font__promo {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ipad__font__detail {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: .009em;
+}
+
+.ipad__font__paragraph {
+    font-size: 21px;
+    margin: 21px auto;
+    line-height: 1.381;
+    /* font-weight: 400; */
+    font-weight: 500;
+    text-align: center;
+}
+
+.ipad__font__highlight {
+    display: inline-block;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.ipad__font__specs {
+    font-size: 14px;
+    line-height: 1.21053;
+    font-weight: 600;
+    margin-top: 9px;
+    margin-bottom: 6px;
+}
+
+.ipad__font__new {
+    font-size: 12px;
+    line-height: 2.08337;
+    font-weight: 400;
+    letter-spacing: -.011em;
+}
+
+.ipad__bg__dark {
+    background-color: #000;
+}
+
+.ipad__bg__dark a {
+    color: #2997ff;
+}
+
+.ipad__bg__light {
+    background-color: #fff;
+}
+
+/* button style */
+.ipad__btn__normal {
+    display: inline-block;
+    background-color: #0071e3;
+    color: #fff;
+    margin-top: 12px;
+    margin-bottom: 13px;
+    padding: 8px 16px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.17648;
+    border-radius: 20px;
+}
+
+.ipad__btn__normal:hover {
+    text-decoration: none;
+}
+
+.ipad__bg__dark .ipad__btn__normal {
+    color: #fff;
+}
+
+.ipad__btn__samll {
+    display: inline-block;
+    background-color: #0071e3;
+    color: #fff;
+    padding: 4px 11px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33337;
+    border-radius: 12px;
+}
+
+/* custom icon style */
+.ipad__icon__wrap:hover a {
+    text-decoration: underline;
+}
+
+.ipad__icon__arrow {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+}
+
+.ipad__icon__arrow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #06c;
+    border-top: 1.5px solid #06c;
+    transform: rotate(45deg);
+}
+
+.ipad__icon__arrow2 {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+}
+
+.ipad__icon__arrow2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 15px;
+    height: 13px;
+    border-bottom: 2px solid #06c;
+    transform: rotate(135deg);
+}
+
+.ipad__icon__arrow2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 9px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #06c;
+    border-top: 2px solid #06c;
+    transform: rotate(5deg);
+}
+
+.ipad__icon__learn {
+    font-size: 21px;
+    margin: 8.4px 10.5px 0 10.5px;
+}
+
+.ipad__icon__learn:hover a {
+    text-decoration: underline;
+}
+
+.ipad__icon__learn .ipad__icon__arrow {
+    width: 18px;
+    height: 18px;
+}
+
+.ipad__icon__learn .ipad__icon__arrow::after {
+    top: 7px;
+    left: 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.ipad__icon__spec {
+    font-size: 14px;
+    margin-top: 13px;
+}
+
+.ipad__icon__spec:hover a {
+    text-decoration: underline;
+}
+
+.ipad__icon__spec .ipad__icon__arrow {
+    width: 14px;
+    height: 14px;
+}
+
+.ipad__icon__spec .ipad__icon__arrow::after {
+    top: 7px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+}
+
+/* dark bg */
+.ipad__bg__dark .ipad__icon__arrow::after {
+    border-right: 1.5px solid #2997ff;
+    border-top: 1.5px solid #2997ff;
+}
+
+.ipad__icon__learn.ipad__color__white a {
+    color: #fff;
+}
+
+.ipad__icon__learn.ipad__color__white a:hover {
+    color: #fff;
+}
+
+.ipad__icon__learn.ipad__color__white .ipad__icon__arrow::after {
+    border-right-color: #fff;
+    border-top-color: #fff;
+}
+
+.ipad__icon__learn.ipad__color__white .ipad__icon__arrow2::before {
+    border-bottom-color: #fff;
+}
+
+.ipad__icon__learn.ipad__color__white .ipad__icon__arrow2::after {
+    border-right-color: #fff;
+    border-top-color: #fff;
+}
+
+/* flex */
+.ipad__flex__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ipad__flex__rowTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ipad__flex__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad__flex__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad__flex__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* 자식이 항상 같은 값이길 바랄떄 */
+.ipad__flex__sameWidth>* {
+    flex: 1;
+}
+
+/* position */
+.ipad__position__relative {
+    position: relative;
+}
+
+.ipad__position__absolute {
+    position: absolute;
+}
+
+/* flex용 item width */
+.ipad__item__full {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ipad__item__half {
+    width: calc(50% - 15px);
+    background-color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ipad__item__half:nth-of-type(2n+1) {
+    margin-right: 15px;
+}
+
+.ipad__item__half:nth-of-type(2n) {
+    margin-left: 15px;
+}
+
+.ipad__item__text {
+    min-width: 560px;
+    padding: 60px;
+}
+
+.ipad__item__img {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ipad__item__bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin: 0 auto;
+}
+
+
+/* width */
+.ipad__width__25p {
+    max-width: 25%;
+    flex-basis: 25%;
+}
+
+.ipad__width__50p {
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.ipad__width__75p {
+    max-width: 75%;
+    flex-basis: 75%;
+}
+
+/* common width */
+/* main1부분이 w980 */
+.ipad__section__content {
+    width: 980px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.ipad__main__wrapper {
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.ipad__main__inner {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+/* margin */
+.ipad__margin__top20 {
+    margin-top: 20px;
+}

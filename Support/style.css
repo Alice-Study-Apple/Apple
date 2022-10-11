@@ -320,3 +320,94 @@ p {
   margin-top: 20px;
   color: #0070c9;
 }
+
+.footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  width: 100%;
+  background-color: #f2f2f2;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.footer .social__channel__wrap {
+  text-align: center;
+}
+
+.footer .social__channel__image__wrap {
+  /* display: flex;
+  justify-content: center; */
+  padding-top: 20px;
+}
+
+.footer .social__channel__image__wrap .social__channel__subtitle {
+  font-size: 12px;
+  color: #333333;
+}
+.footer .social__channel__image__wrap img {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+}
+
+.footer hr {
+  margin-top: 50px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.footer .support__wrap {
+  margin-left: 20%;
+}
+
+.footer .support__intro {
+  display: flex;
+  justify-content: left;
+  padding-top: 20px;
+}
+.footer .support__intro li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.footer .support__intro a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer .support__menu ul li {
+  font-size: 12px;
+  list-style: none;
+  padding-top: 5px;
+  color: #666666;
+}
+
+.footer .support__menu {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.footer .support__menu * {
+  margin-right: 40px;
+}
+
+.footer .support__menu div ul li:nth-child(1) {
+  font-weight: bold;
+}
+
+.footer .policy {
+  margin-top: 10px;
+  margin-left: 20%;
+}
+.footer .policy ul {
+  display: flex;
+  justify-content: left;
+}
+.footer .policy ul li {
+  list-style: none;
+  font-size: 11px;
+  margin-right: 40px;
+  color: #888888;
+}

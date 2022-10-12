@@ -662,6 +662,7 @@ body {
 #ipad__main7__sec3 {
     background-color: #000;
     height: 658px;
+    transition: all 0.3s;
 }
 
 #ipad__txt__bundle {
@@ -693,10 +694,10 @@ body {
 
 /* svg로 배경색에 따라서 계속 변한다. */
 #ipad__logo__music {
-    width: 98px;
-    height: 39px;
-    /* 임시로 tv로 */
-    background-image: url(../image/main7/apple_tv_plus_logo__ghwovsdrknyy_large.png);
+    width: 186px;
+    height: 66px;
+    /* 임시로 png로 */
+    background-image: url(../image/main7/apple_music_w.png);
     margin: 0 auto;
 }
 
@@ -781,6 +782,291 @@ body {
 
 #ipad__item__work {
     background-image: url(../image/main7/ipad_for_business__dg81h7gvgbyq_large.jpg);
+}
+
+/* slide 123 */
+#ipad__main7__slideWrap {
+    overflow: hidden;
+    height: 296px;
+    width: 675px;
+    margin-top: 30px;
+}
+
+#ipad__main7__slideWrap ul {
+    display: flex;
+    white-space:nowrap;
+    width: max-content;
+}
+
+.ipad__main7__slide1 {
+    transform: translateX(0px);
+}
+
+.ipad__main7__slide2 {
+    transform: translateX(-80px);
+}
+
+#ipad__main7__slideWrap ul li {
+    position: relative;
+    display: inline-block;
+    width: 238px;
+    height: 135px;
+    margin: 0 6px 6px;
+}
+
+#ipad__main7__slideWrap .ipad__item__bg {
+    display: inline-block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#ipad__main7__slideWrap .ipad__item__bg div {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0);
+}
+
+#ipad__main7__slideWrap .ipad__item__bg:hover div {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#ipad__main7__slideWrap .ipad__item__bg span {
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: all 0.5s;
+    font-size: 14px;
+    color: #1d1d1f;
+    font-weight: bold;
+    opacity: 0;
+}
+
+#ipad__main7__slideWrap .ipad__item__bg:hover span {
+    top: 50%;
+    opacity: 1;
+}
+
+.ipad__slide1__img0 {
+    background-image: url(../image/main7/slide1/img0.jpg);
+}
+
+.ipad__slide1__img1 {
+    background-image: url(../image/main7/slide1/img1.jpg);
+}
+
+.ipad__slide1__img2 {
+    background-image: url(../image/main7/slide1/img2.jpg);
+}
+
+.ipad__slide1__img3 {
+    background-image: url(../image/main7/slide1/img3.jpg);
+}
+
+.ipad__slide1__img4 {
+    background-image: url(../image/main7/slide1/img4.jpg);
+}
+
+.ipad__slide1__img5 {
+    background-image: url(../image/main7/slide1/img5.jpg);
+}
+
+.ipad__slide1__img6 {
+    background-image: url(../image/main7/slide1/img6.jpg);
+}
+
+.ipad__slide1__img7 {
+    background-image: url(../image/main7/slide1/img7.jpg);
+}
+
+.ipad__slide1__img8 {
+    background-image: url(../image/main7/slide1/img8.jpg);
+}
+
+.ipad__slide1__img9 {
+    background-image: url(../image/main7/slide1/img9.jpg);
+}
+
+.ipad__slide1__img10 {
+    background-image: url(../image/main7/slide1/img10.jpg);
+}
+
+.ipad__slide1__img11 {
+    background-image: url(../image/main7/slide1/img11.jpg);
+}
+
+/* music */
+#ipad__main7__musicWrap {
+    position: relative;
+    top: -27px;
+    display: flex;
+    height: 347px;
+    width: 675px;
+    overflow: hidden;
+}
+
+#ipad__music__pause,
+#ipad__slide__pause {
+    position: absolute;
+    top: 38%;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#ipad__music__stop,
+#ipad__music__play,
+#ipad__slide__stop,
+#ipad__slide__play {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 13px;
+}
+
+#ipad__slide__stop.on,
+#ipad__slide__play.on,
+#ipad__music__stop.on,
+#ipad__music__play.on {
+    display: block;
+}
+
+#ipad__main7__musicWrap ul {
+    display: flex;
+    align-items: center;
+    white-space:nowrap;
+    width: max-content;
+    transform: translateX(-38px);
+}
+
+#ipad__main7__musicWrap ul li {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 226.63px;
+    height: 283.5px;
+    margin: 0 6px 6px;
+    transition: all 1.5s;
+    border-radius: 10px;
+}
+
+#ipad__main7__musicWrap ul li.ipad__item__centered {
+    position: relative;
+    display: inline-block;
+    width: 259px;
+    height: 324px;
+    margin: 0 6px 6px;
+}
+
+#ipad__main7__musicWrap .ipad__item__bg {
+    display: inline-block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#ipad__main7__musicWrap .ipad__item__bg .ipad__bg__blend {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0);
+}
+
+#ipad__main7__musicWrap .ipad__item__bg:hover .ipad__bg__blend {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#ipad__main7__musicWrap .ipad__music__detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: #897051;
+    font-size: 13px;
+    padding: 16px 18px 17px;
+    text-align: left;
+    line-height: 1.1;
+}
+
+#ipad__main7__musicWrap .ipad__music__album {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.ipad__music__music0 {
+    background-image: url(../image/main7/slide3/0.jpg);
+}
+.ipad__music__music1 {
+    background-image: url(../image/main7/slide3/1.jpg);
+}
+.ipad__music__music2 {
+    background-image: url(../image/main7/slide3/2.jpg);
+}
+.ipad__music__music3 {
+    background-image: url(../image/main7/slide3/0.jpg);
+}
+.ipad__music__music4 {
+    background-image: url(../image/main7/slide3/4.jpg);
+}
+.ipad__music__music5 {
+    background-image: url(../image/main7/slide3/5.jpg);
+}
+.ipad__music__music6 {
+    background-image: url(../image/main7/slide3/6.jpg);
+}
+.ipad__music__music7 {
+    background-image: url(../image/main7/slide3/7.jpg);
+}
+.ipad__music__music8 {
+    background-image: url(../image/main7/slide3/8.jpg);
+}
+.ipad__music__music9 {
+    background-image: url(../image/main7/slide3/9.jpg);
+}
+.ipad__music__music10 {
+    background-image: url(../image/main7/slide3/10.jpg);
+}
+
+.ipad__music__music11 {
+    background-image: url(../image/main7/slide3/11.jpg);
+}
+
+
+#ipad__main7__musicWrap .ipad__item__bg:hover span {
+    top: 50%;
+    opacity: 1;
+}
+
+#ipad__main7__musicWrap .ipad__item__bg span {
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: all 0.5s;
+    font-size: 14px;
+    color: #1d1d1f;
+    font-weight: bold;
+    opacity: 0;
 }
 
 /* footer */

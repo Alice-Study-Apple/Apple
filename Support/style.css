@@ -432,6 +432,8 @@ p {
 .footer .policy {
   margin-top: 10px;
   margin-left: 20%;
+  margin-right: 18%;
+  padding-bottom: 20px;
 }
 .footer .policy ul {
   display: flex;
@@ -442,4 +444,8 @@ p {
   font-size: 11px;
   margin-right: 40px;
   color: #888888;
+}
+
+.footer .policy ul li:nth-child(7) {
+  margin-left: auto;
 }

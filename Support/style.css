@@ -66,7 +66,6 @@
 
 .support__types__ul img {
   width: 68px;
-  padding-bottom: 16px;
 }
 
 .support__types__ul li {
@@ -80,18 +79,18 @@
 hr {
   width: 100%;
   border-top: 1px solid #dedede;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .etc__types__wrap ul {
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   list-style: none;
 }
 .etc__types__wrap ul li {
   color: #0070c9;
-  width: 180px;
+  /* width: 180px; */
 
   margin-right: 70px;
   text-align: center;
@@ -100,7 +99,6 @@ hr {
   width: 40px;
   height: 40px;
   margin-left: 60px;
-  margin-bottom: 15px;
 }
 
 .etc__types__wrap ul li p {
@@ -148,18 +146,23 @@ hr {
   margin-top: 50px;
 }
 
+.update__wrap .update__detail h2 {
+  font-size: 40px;
+}
+
 .update__wrap .update__image img {
   width: 400px;
   height: 210px;
 }
 
 .update__wrap .update__detail .update__description {
+  font-size: 22px;
   margin-top: 15px;
 }
 
 .update__wrap .update__detail .update__link {
   display: block;
-  margin-top: 70px;
+  margin-top: 25px;
   color: #0070c9;
   font-size: 18px;
 }
@@ -183,6 +186,7 @@ hr {
 }
 
 .get__support__detail .get__support__title {
+  font-size: 40px;
   color: white;
 }
 
@@ -205,20 +209,23 @@ hr {
 }
 
 .trade__wrap .trade__description h2 {
+  font-size: 40px;
   margin-bottom: 25px;
 }
 
 .trade__wrap .trade__description p {
-  margin-bottom: 25px;
+  font-size: 22px;
+  margin-bottom: 50px;
 }
 
 .trade__wrap .trade__description a {
+  font-size: 22px;
   color: #0070c9;
 }
 
 .trade__wrap .trade__image img {
   width: 400px;
-  height: 165px;
+  height: 250px;
 }
 
 .apple__care__wrap {
@@ -229,44 +236,60 @@ hr {
 
 .apple__care__wrap .apple__care__image img {
   width: 400px;
+  height: 250px;
 }
 .apple__care__wrap .apple__care__description {
   margin-left: 20px;
 }
 
+.apple__care__wrap .apple__care__description h2 {
+  font-size: 38px;
+}
+
 .apple__care__wrap .apple__care__description p {
+  font-size: 22px;
   margin-top: 10px;
 }
 .apple__care__wrap .apple__care__description a {
   display: block;
+  font-size: 22px;
   margin-top: 40px;
   color: #0070c9;
 }
 
 .my__support__wrap {
-  margin-top: 80px;
+  margin-top: 48px;
   display: flex;
   justify-content: center;
 }
 
+.my__support__wrap .my__support__description h2 {
+  font-size: 40px;
+}
 .my__support__wrap .my__support__description p {
+  font-size: 22px;
   margin-top: 40px;
 }
 
 .my__support__wrap .my__support__description a {
   display: block;
+  font-size: 22px;
   margin-top: 20px;
   color: #0070c9;
 }
 
 .my__support__wrap .my__support__image img {
   width: 400px;
+  height: 230px;
 }
 
 .repairs__wrap {
   text-align: center;
 }
-.repairs__wrap h2,
+.repairs__wrap h3 {
+  font-size: 22px;
+}
+.repairs__wrap h3,
 p {
   margin-top: 20px;
 }
@@ -279,7 +302,10 @@ p {
   text-align: center;
 }
 
-.beware__wrap h2,
+.beware__wrap h3 {
+  font-size: 22px;
+}
+.beware__wrap h3,
 p {
   margin-top: 20px;
 }
@@ -301,6 +327,10 @@ p {
 .gift__card__wrap .gift__card__detail {
   margin-left: 50px;
 }
+
+.gift__card__wrap .gift__card__detail h3 {
+  font-size: 22px;
+}
 .gift__card__wrap .gift__card__detail a {
   display: block;
   margin-top: 20px;
@@ -311,7 +341,8 @@ p {
   margin-left: 27%;
 }
 
-.service__program__wrap h2 {
+.service__program__wrap h3 {
+  font-size: 22px;
   margin-top: 30px;
 }
 
@@ -334,16 +365,17 @@ p {
   text-align: center;
 }
 
+.footer .social__channel__wrap .social__channel__subtitle {
+  font-size: 12px;
+  color: #333333;
+}
+
 .footer .social__channel__image__wrap {
   /* display: flex;
   justify-content: center; */
   padding-top: 20px;
 }
 
-.footer .social__channel__image__wrap .social__channel__subtitle {
-  font-size: 12px;
-  color: #333333;
-}
 .footer .social__channel__image__wrap img {
   width: 32px;
   height: 32px;

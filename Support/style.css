@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 .main {
   width: 100%;
 }
@@ -39,7 +44,6 @@
 .support__banner__image {
   width: 100%;
   height: 540px;
-  /* overflow:hidden; */
 }
 .support__text {
   position: absolute;
@@ -50,7 +54,6 @@
   font-weight: 400;
   line-height: 1.0416666667;
   letter-spacing: 0.006em;
-  /* margin-bottom: 0; */
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
 }
@@ -66,44 +69,62 @@
 
 .support__types__ul img {
   width: 68px;
-  padding-bottom: 16px;
+}
+.support__types__ul li a {
+  display: block;
 }
 
+.support__types__ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
 .support__types__ul li {
   margin-right: 80px;
 }
 
 .support__types__ul li p {
-  margin-left: 15px;
+  padding-left: 10px;
+  color: #333333;
+}
+
+.support__types__ul li:nth-child(7) p {
+  padding-left: 22px;
 }
 
 hr {
   width: 100%;
   border-top: 1px solid #dedede;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .etc__types__wrap ul {
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   list-style: none;
 }
 .etc__types__wrap ul li {
-  color: #0070c9;
-  width: 180px;
-
-  margin-right: 70px;
+  /* margin-right: 70px; */
   text-align: center;
+  /* background-color: black; */
+  padding-right: 70px;
+  border-right: 1px solid #dedede;
+}
+
+.etc__types__wrap ul li:nth-child(3) {
+  border-right: none;
+}
+.etc__types__wrap ul li a:hover {
+  text-decoration: underline;
 }
 .etc__types__wrap ul li img {
   width: 40px;
   height: 40px;
   margin-left: 60px;
-  margin-bottom: 15px;
 }
 
 .etc__types__wrap ul li p {
+  color: #0070c9;
   padding-left: 50px;
 }
 
@@ -148,18 +169,23 @@ hr {
   margin-top: 50px;
 }
 
+.update__wrap .update__detail h2 {
+  font-size: 40px;
+}
+
 .update__wrap .update__image img {
   width: 400px;
   height: 210px;
 }
 
 .update__wrap .update__detail .update__description {
+  font-size: 22px;
   margin-top: 15px;
 }
 
 .update__wrap .update__detail .update__link {
   display: block;
-  margin-top: 70px;
+  margin-top: 25px;
   color: #0070c9;
   font-size: 18px;
 }
@@ -168,13 +194,11 @@ hr {
   margin-top: 80px;
   position: relative;
   height: 350px;
-  /* height: 400px; */
 }
 
 .get__support__wrap img {
   position: absolute;
   width: 100%;
-  /* height: 350px; */
 }
 .get__support__detail {
   margin-left: 23%;
@@ -183,6 +207,7 @@ hr {
 }
 
 .get__support__detail .get__support__title {
+  font-size: 40px;
   color: white;
 }
 
@@ -197,6 +222,12 @@ hr {
   color: #66bbff;
 }
 
+@media (min-width: 0px) and (max-width: 1160px) {
+  .get__support__detail {
+    display: none;
+  }
+}
+
 .trade__wrap {
   position: relative;
   display: flex;
@@ -205,20 +236,23 @@ hr {
 }
 
 .trade__wrap .trade__description h2 {
+  font-size: 40px;
   margin-bottom: 25px;
 }
 
 .trade__wrap .trade__description p {
-  margin-bottom: 25px;
+  font-size: 22px;
+  margin-bottom: 50px;
 }
 
 .trade__wrap .trade__description a {
+  font-size: 22px;
   color: #0070c9;
 }
 
 .trade__wrap .trade__image img {
   width: 400px;
-  height: 165px;
+  height: 250px;
 }
 
 .apple__care__wrap {
@@ -229,44 +263,60 @@ hr {
 
 .apple__care__wrap .apple__care__image img {
   width: 400px;
+  height: 250px;
 }
 .apple__care__wrap .apple__care__description {
   margin-left: 20px;
 }
 
+.apple__care__wrap .apple__care__description h2 {
+  font-size: 38px;
+}
+
 .apple__care__wrap .apple__care__description p {
+  font-size: 22px;
   margin-top: 10px;
 }
 .apple__care__wrap .apple__care__description a {
   display: block;
+  font-size: 22px;
   margin-top: 40px;
   color: #0070c9;
 }
 
 .my__support__wrap {
-  margin-top: 80px;
+  margin-top: 48px;
   display: flex;
   justify-content: center;
 }
 
+.my__support__wrap .my__support__description h2 {
+  font-size: 40px;
+}
 .my__support__wrap .my__support__description p {
+  font-size: 22px;
   margin-top: 40px;
 }
 
 .my__support__wrap .my__support__description a {
   display: block;
+  font-size: 22px;
   margin-top: 20px;
   color: #0070c9;
 }
 
 .my__support__wrap .my__support__image img {
   width: 400px;
+  height: 230px;
 }
 
 .repairs__wrap {
   text-align: center;
 }
-.repairs__wrap h2,
+.repairs__wrap h3 {
+  font-size: 22px;
+}
+.repairs__wrap h3,
 p {
   margin-top: 20px;
 }
@@ -279,7 +329,10 @@ p {
   text-align: center;
 }
 
-.beware__wrap h2,
+.beware__wrap h3 {
+  font-size: 22px;
+}
+.beware__wrap h3,
 p {
   margin-top: 20px;
 }
@@ -301,6 +354,10 @@ p {
 .gift__card__wrap .gift__card__detail {
   margin-left: 50px;
 }
+
+.gift__card__wrap .gift__card__detail h3 {
+  font-size: 22px;
+}
 .gift__card__wrap .gift__card__detail a {
   display: block;
   margin-top: 20px;
@@ -311,13 +368,17 @@ p {
   margin-left: 27%;
 }
 
-.service__program__wrap h2 {
+.service__program__wrap h3 {
+  font-size: 22px;
   margin-top: 30px;
 }
 
 .service__program__wrap ul li {
   list-style: none;
   margin-top: 20px;
+}
+
+.service__program__wrap ul a {
   color: #0070c9;
 }
 
@@ -334,16 +395,17 @@ p {
   text-align: center;
 }
 
+.footer .social__channel__wrap .social__channel__subtitle {
+  font-size: 12px;
+  color: #333333;
+}
+
 .footer .social__channel__image__wrap {
   /* display: flex;
   justify-content: center; */
   padding-top: 20px;
 }
 
-.footer .social__channel__image__wrap .social__channel__subtitle {
-  font-size: 12px;
-  color: #333333;
-}
 .footer .social__channel__image__wrap img {
   width: 32px;
   height: 32px;
@@ -358,6 +420,11 @@ p {
 
 .footer .support__wrap {
   margin-left: 20%;
+}
+
+.footer .support__wrap .support__intro ul li:nth-child(2) {
+  color: #dedede;
+  font-size: 15px;
 }
 
 .footer .support__intro {
@@ -400,6 +467,8 @@ p {
 .footer .policy {
   margin-top: 10px;
   margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 20px;
 }
 .footer .policy ul {
   display: flex;
@@ -408,6 +477,18 @@ p {
 .footer .policy ul li {
   list-style: none;
   font-size: 11px;
-  margin-right: 40px;
+  padding-right: 7px;
   color: #888888;
+}
+
+.footer .policy ul li:nth-child(n + 2):nth-child(-n + 5) {
+  padding-left: 7px;
+  border-right: 1px solid #dedede;
+}
+
+.footer .policy ul li:nth-child(6) {
+  padding-left: 7px;
+}
+.footer .policy ul li:nth-child(7) {
+  margin-left: auto;
 }

@@ -104,8 +104,15 @@ hr {
   list-style: none;
 }
 .etc__types__wrap ul li {
-  margin-right: 70px;
+  /* margin-right: 70px; */
   text-align: center;
+  /* background-color: black; */
+  padding-right: 70px;
+  border-right: 1px solid #dedede;
+}
+
+.etc__types__wrap ul li:nth-child(3) {
+  border-right: none;
 }
 .etc__types__wrap ul li a:hover {
   text-decoration: underline;
@@ -415,6 +422,11 @@ p {
   margin-left: 20%;
 }
 
+.footer .support__wrap .support__intro ul li:nth-child(2) {
+  color: #dedede;
+  font-size: 15px;
+}
+
 .footer .support__intro {
   display: flex;
   justify-content: left;
@@ -465,10 +477,18 @@ p {
 .footer .policy ul li {
   list-style: none;
   font-size: 11px;
-  margin-right: 15px;
+  padding-right: 7px;
   color: #888888;
 }
 
+.footer .policy ul li:nth-child(n + 2):nth-child(-n + 5) {
+  padding-left: 7px;
+  border-right: 1px solid #dedede;
+}
+
+.footer .policy ul li:nth-child(6) {
+  padding-left: 7px;
+}
 .footer .policy ul li:nth-child(7) {
   margin-left: auto;
 }

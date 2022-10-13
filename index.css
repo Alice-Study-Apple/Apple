@@ -246,18 +246,20 @@ h5 {
 
 /* slide */
 .slide__container {
+  position: relative;
   width: 100%;
+  height: 551px;
+  overflow: hidden;
 }
 
 .slide__wrapper {
   position: relative;
-  width: 660px;
+  width: 2988px;
   margin: 0 auto;
-  height: 200px;
-  overflow: hidden;
+  height: 551px;
 }
 
-/* ul 너비는 슬라이드 수만큼 js 에서 계산하여 입력예쩡 */
+/* ul 너비는 슬라이드 수만큼 js 에서 계산하여 입력예정 */
 .slide__ul {
   position: absolute;
   left: 0;
@@ -269,35 +271,97 @@ h5 {
 }
 
 .slide__li {
-  width: 200px;
-  height: 200px;
+  position: relative;
+  width: 980px;
+  height: 551px;
   float: left;
+  cursor: pointer;
+  z-index: 200;
 }
 
 .slide__li:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 16px;
 }
 
-.controls {
+.slide__li a {
+  font-size: 0;
+  display: block;
+  line-height: 551px;
+  width: 980px;
   text-align: center;
-  margin-top: 50px;
 }
 
-.slide--prev__btn {
-  width: 50px;
-  height: 50px;
-  background-color: #2997ff;
-}
-
+.slide--prev__btn,
 .slide--next__btn {
-  width: 50px;
-  height: 50px;
-  background-color: greenyellow;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* 슬라이드 이동 시마다 stream 버튼에 적용할 애니메이션 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.slide--stream__box {
+  color: white;
+}
+
+.slide--stream__text {
+  position: absolute;
+  top: 465px;
+  left: 245px;
+}
+
+.slide--stream__genre,
+.slide--stream__description {
+  letter-spacing: -0.5px;
+  font-size: 20px;
+}
+
+.slide--stream__genre {
+  font-weight: 700;
+}
+
+.slide--stream__btn {
+  font-size: 14px;
+  font-weight: 600;
+
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  top: 460px;
+  left: 60px;
+}
+
+.text-up {
+  animation: fadeInUp 1s;
+}
+
+.text-none {
+  display: none;
+}
+
+.fa-solid fa-circle-play {
+  margin-top: 2px;
 }
 
 .slide__pagination {
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .slide__pagination li {
@@ -310,6 +374,20 @@ h5 {
   background: rgba(0, 0, 0, 0.16);
 
   cursor: pointer;
+}
+
+.slide--play__btn,
+.slide--stop__btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  background-color: white;
+
+  cursor: pointer;
+}
+
+.playing {
+  z-index: 10;
 }
 
 .slide__pagination li.active {
@@ -368,8 +446,6 @@ h5 {
 footer * {
   font-size: 12px;
   letter-spacing: -0.01em;
-  /* line-height: 16px; */
-
   color: #6e6e73;
 
   text-align: left;
@@ -408,8 +484,6 @@ footer a:hover {
 
 .footer__box--links {
   display: flex;
-  /* flex-direction: column; */
-  /* background-color: azure; */
 }
 
 .footer__columns {

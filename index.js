@@ -5,9 +5,9 @@ let currentIdx = 0;
 // 슬라이드의 수
 let slideCount = slide.length;
 // 각 슬라이드의 길이
-let slideWidth = 200;
+let slideWidth = 980;
 // 슬라이드별 margin
-let slideMargin = 30;
+let slideMargin = 16;
 // 이전가기 버튼
 let prevBtn = document.querySelector(".slide--prev__btn");
 // 다음 가기 버튼
@@ -18,8 +18,17 @@ let slideWrap = document.querySelector(".slide__wrapper");
 let timer = undefined;
 // 페이지네이션 버튼들
 let pagerbtns = document.querySelectorAll(".slide__pagination li");
-
+// 스크롤 제외한 실제 화면 너비
+let vieWidth = document.body.clientWidth;
+// 슬라이드 재생 상태 버튼
+let slidePlayBtn = document.querySelector(".slide--play__btn");
+// 슬라이드 재생 상태 확인용
+let playCheck = true;
+// 슬라이드 일시 정지 상태 버튼
+let slideStopBtn = document.querySelector(".slide--stop__btn");
 // 기존 슬라이드들의 앞 뒤로 같은 크기의 클론을 붙여준다
+let slideStreamBoxes = document.querySelectorAll(".slide--stream__box");
+
 makeClone();
 
 function makeClone() {
@@ -66,7 +75,9 @@ function updateWidth() {
 //ul의 초기 위치를 구하는 함수
 function setInitialPos() {
   // 초기 이동 너비 값을 구한다. 클론하여 붙인 슬라이드 수만큼 곱한다. 왼쪽으로 이동해야하므로 - 를 붙여준다
-  let initialTranslateValue = -(slideWidth + slideMargin) * slideCount;
+  let initialTranslateValue =
+    -(slideWidth + slideMargin) * slideCount +
+    Math.floor((vieWidth - slideWidth) * 0.5);
   // ul 에 translateX를 사용해서  초기 이동 너비 값만큼 이동시킨다
   slides.style.transform = `translateX(${initialTranslateValue}px)`;
 }
@@ -107,8 +118,19 @@ function moveSlide(num) {
   }
   // 클릭한 이벤트 대상에게 active 클래스를 추가해준다
   pagerbtns[num % slideCount].classList.add("active");
+  // 이동할 슬라이드에 text-up 클래스를 추가한다
+  for (let i = 0; i < slideStreamBoxes.length; i++) {
+    slideStreamBoxes[i].classList.remove("text-up");
+    slideStreamBoxes[i].classList.add("text-none");
+  }
+  slideStreamBoxes[currentIdx].classList.remove("text-none");
+  slideStreamBoxes[currentIdx].classList.add("text-up");
 }
 
+// 모든 슬라이드 스트림 박스를 안보이게 해둔다
+for (let i = 0; i < slideStreamBoxes.length; i++) {
+  slideStreamBoxes[i].classList.add("text-none");
+}
 // 0번째 페이저 버튼에 active를 추가해주어야 하므로 로드시 0번째로 이동하도록 moveslide를 실행한다
 moveSlide(0);
 
@@ -122,7 +144,10 @@ slideWrap.addEventListener("mouseover", function () {
 
 // 마우스가 나가면 자동 이동을 다시 시작한다
 slideWrap.addEventListener("mouseout", function () {
-  startAutoSlide();
+  // playcheck 가 true 상태이면 재생 버튼중이니 이동한다
+  if (playCheck) {
+    startAutoSlide();
+  }
 });
 
 // 일정 시간마다 슬라이드 이동하는 함수 만들기
@@ -132,7 +157,7 @@ function startAutoSlide() {
     let nextIdx = (currentIdx % slideCount) + 1;
     // 다음 인덱스를 moveslide 에 넣어 다음 인덱스로 이동한다
     moveSlide(nextIdx);
-  }, 1000);
+  }, 3000);
 }
 
 // 자동 이동 중지 함수를 만들기
@@ -142,6 +167,7 @@ function stopAutoSlide() {
 
 // 페이지 로드 시 슬라이드 자동 이동 함수를 실행 시킨다
 startAutoSlide();
+slideStopBtn.classList.toggle("playing");
 
 // 페이지네이션으로 슬라이드 이동하기
 for (let i = 0; i < pagerbtns.length; i++) {
@@ -153,4 +179,38 @@ for (let i = 0; i < pagerbtns.length; i++) {
     // 페이저로 가져온 변수를 moveSlide에 넣어 슬리이드를 이동한다
     moveSlide(pagerNum);
   });
+}
+
+// 슬라이드 다음가기 버튼 위치 지정
+nextBtn.style.left =
+  slideWidth + Math.floor((vieWidth - slideWidth) / 2) + "px";
+
+nextBtn.style.width = Math.floor((vieWidth - slideWidth) / 2) + "px";
+// -(slideWidth + slideMargin) * slideCount +
+//   Math.floor((vieWidth - slideWidth) * 0.5);
+
+prevBtn.style.width = Math.floor((vieWidth - slideWidth) / 2) + "px";
+
+slidePlayBtn.addEventListener("click", playOrStop);
+slideStopBtn.addEventListener("click", playOrStop);
+
+// 정지, 재생 버튼 함수
+function playOrStop() {
+  // 재생중이면 stop 시킨다
+  if (playCheck) {
+    // 슬라이드를 멈추고 playcheck 상태를 false로 바꾼다
+    stopAutoSlide();
+    playCheck = false;
+    // 재생중이 아니면(정지중이면) 재생 시킨다
+    // 버튼의 z-index 를 토글 css로 바꿔주어 재생 버튼이 위로오게 한다
+    slidePlayBtn.classList.toggle("playing");
+    slideStopBtn.classList.toggle("playing");
+  } else {
+    // 재생시키고 playCheck 를 true (재생 상태)로 바꾼다
+    // 버튼의 z-index 를 토글 css로 바꿔주어 정지 버튼이 위로오게 한다
+    startAutoSlide();
+    playCheck = true;
+    slidePlayBtn.classList.toggle("playing");
+    slideStopBtn.classList.toggle("playing");
+  }
 }

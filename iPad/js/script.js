@@ -1,26 +1,19 @@
 /* -----------poster slide 1,2----------- */
 const slide1 = document.getElementById("ipad__main7__animate1");
 const slide2 = document.getElementById("ipad__main7__animate2");
-// const pause = document.getElementById("ipad__main7_stop")
-// console.log(slide1.offsetWidth.x)
-// console.log(slide1.scrollWidth )
 
 let final = '-2250px'
 let stops = '0px'
 
 let abcd = setInterval(function () {
-    // console.log(slide1.getBoundingClientRect().x)
-    // console.log(slide1.style)
 
     slide1.animate({
         transform: `translateX(${final})`
     }, {
-        // timing options
         duration: 1500000,
-        // duration: 50,
-        easing: 'ease', // 애니메이션이 어떻게 실행될지
+        easing: 'ease',
         iterations: 1,
-        fill: 'both', // ??
+        fill: 'both',
 
     });
 
@@ -34,11 +27,6 @@ let abcd = setInterval(function () {
     });
 
 }, 200);
-
-// pause.addEventListener('click', function(){
-//     console.log('abc')
-// clearInterval(abcd)
-// })
 
 
 /* -----------music album slide----------- */
@@ -65,16 +53,15 @@ function colorRandom() {
     color1 = Math.round(Math.random() * 256);
     color2 = Math.round(Math.random() * 256);
     color3 = Math.round(Math.random() * 256);
+
     combo = `rgb(${color1}, ${color2}, ${color3})`
     musicColor.style.backgroundColor = `${combo}`
-
-    // console.log((color1 + color2 + color3) / 3)
     musicDetaili[count].style.backgroundColor = `rgb(${color1-100}, ${color2-100}, ${color3-100})`;
+
     count++;
 
     // 색상의 밝음 어두움에 따라서
     if ((color1 + color2 + color3) / 3 > 150) {
-        // if (color1 > 128 || color2 > 128 || color3 > 128) {
         logo = `apple_music.png`;
 
         if (musicTitleS.classList.contains('ipad__color__white')) {
@@ -82,7 +69,7 @@ function colorRandom() {
             musicLink[0].classList.remove('ipad__color__white')
             musicLink[1].classList.remove('ipad__color__white')
         }
-        // musicTitleS.classList.add('ipad__color__white')
+
     } else {
         logo = `apple_music_w.png`
         if (!musicTitleS.classList.contains('ipad__color__white')) {
@@ -115,42 +102,14 @@ let slide3Fn = function () {
     slides.animate({
         marginLeft: [from + 'px', to + 'px'],
     }, {
-        duration: 1500, // 시간값
-        easing: 'ease-out', // 애니메이션이 어떻게 실행될지
-        iterations: 1, // 무한으로
-        fill: 'both', // ??
+        duration: 1500,
+        easing: 'ease-out',
+        iterations: 1,
+        fill: 'both',
     });
 
     // 애니메이션이 끝나면 현재 위치를 증가
     currentSlide++;
-
-    // console.log(currentSlide)
-    // 다시 처음 위치가 되면 초기화
-    // if (currentSlide === slide.length - 1) {
-    //     currentSlide = 0;
-    //     console.log('여기댜')
-    // }
-
-    // let slideCur = musicWrap.querySelector('.ipad__item__centered')
-    // console.log(slideCur)
-
-    // let next = slideCur.parentElement.children[0]
-    // let next2 = slideCur.parentElement.children[1] 
-    // console.log(next)
-    // console.log(next2)
-
-    // if(slide[currentSlide] == slideCur.parentElement.firstElementChild){
-    //     currentSlide = 0;
-    // }
-    // if(currentSlide > 3){
-    //     if (slideCur.nextElementSibling.nextElementSibling == null) {
-    //         // slideCur.nextElementSibling = ;
-    //         slideCur.parentElement.appendChild(next);
-    //         slideCur.parentElement.appendChild(next2);
-    //         slide = slides.querySelectorAll('li');
-    //     }
-
-    // }
 }
 
 let animate3 = setInterval(slide3Fn, 2500);
@@ -170,10 +129,14 @@ musicPlay.addEventListener('click', function () {
 
 if (musicStop.classList.contains('on')) {
     musicWrap.addEventListener('mouseenter', function () {
-        clearInterval(animate3)
+        if (!ipad__music__play.classList.contains('on')) {
+            clearInterval(animate3)
+        }
     })
 
     musicWrap.addEventListener('mouseleave', function () {
-        animate3 = setInterval(slide3Fn, 2000)
+        if (!ipad__music__play.classList.contains('on')) {
+            animate3 = setInterval(slide3Fn, 2000)
+        }
     })
-}
+} 

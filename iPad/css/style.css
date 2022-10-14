@@ -981,10 +981,12 @@ body {
 }
 
 #ipad__main7__musicWrap .ipad__item__bg .ipad__bg__blend {
+    position: relative;
     width: 100%;
     height: 100%;
     transition: all 0.3s;
     background-color: rgba(0,0,0,0);
+    z-index: 2;
 }
 
 #ipad__main7__musicWrap .ipad__item__bg:hover .ipad__bg__blend {

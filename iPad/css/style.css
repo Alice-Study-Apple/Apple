@@ -660,6 +660,7 @@ body {
 
 #ipad__main7__sec2,
 #ipad__main7__sec3 {
+    overflow: hidden;
     background-color: #000;
     height: 658px;
     transition: all 0.3s;
